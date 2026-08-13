@@ -19,4 +19,7 @@ export NODE_OPTIONS="--max_old_space_size=8192"
 #
 
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
-. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+. /opt/homebrew/opt/asdf/etc/bash_completion.d/asdf.bash
+
+export EDITOR="code --wait"
+. "$HOME/.cargo/env"

@@ -2,20 +2,28 @@
 	name = David Higgins
 	email = david@paradem.co
 	signingkey = 8F93117107AA057DD0C20281E3C8220D8741457B
-[mergetool]
-	keepBackup = true
-[mergetool "Kaleidoscope"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-  trustexitcode = true
-[merge]
-  tool = Kaleidoscope
-[difftool "Kaleidoscope"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[difftool]
-  prompt = false
-[diff]
-  tool = Kaleidoscope
+# [mergetool]
+# 	keepBackup = true
+# [mergetool "Kaleidoscope"]
+#   cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+#   trustexitcode = true
+# [merge]
+#   tool = Kaleidoscope
+# [difftool "Kaleidoscope"]
+#   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+# [difftool]
+#   prompt = false
+# [diff]
+#   tool = Kaleidoscope
 [commit]
-	gpgsign = true
+	gpgsign = false
 [gpg]
-	program = /opt/homebrew/bin/gpg
+	program = /usr/local/MacGPG2/bin/gpg2
+	format = openpgp
+[credential]
+	helper = osxkeychain
+	useHttpPath = true
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[core]
+	excludesFile = /Users/david/.config/git/ignore
