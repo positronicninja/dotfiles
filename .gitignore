@@ -1,1 +1,3 @@
 /backups/.*
+.DS_Store
+.gpg_keys
